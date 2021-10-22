@@ -1,0 +1,11 @@
+{% extends 'back_g.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type='text' name="name" placeholder="New products name"><br>
+    <input type='text' name="desc" placeholder="New products desc"><br>
+    <input type='text' name="price" placeholder="New products price"><br>
+    <input type='file' name="img" placeholder="New products img"><br>
+    <input type='submit'value="ADD">
+</form>
+{% endblock %}

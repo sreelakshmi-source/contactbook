@@ -1,0 +1,18 @@
+{% extends 'back_g.html' %}
+{% block body %}
+<body>
+<div class="col-md-4">
+<div class="card" style="width:250px">
+  <img class="card-img-top" src="{{shop.img.url}}" alt="Card image" style="width:250px; height:300px;">
+  <div class="card-body">
+    <h4 class="card-title">{{shop.name}}</h4>
+    <p class="card-text">{{shop.desc}}</p>
+<a class="btn btn-primary" href="{% url 'update' shop.id %}" style="width:100px;"> UPDATE </a>
+<a class="btn btn-primary" href="{% url 'delete' shop.id %}" style="width:100px;"> DELETE </a>
+
+  </div>
+</div>
+</div>
+</body>
+
+{% endblock %}
